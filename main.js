@@ -10,7 +10,6 @@ import {
   orderBy
 } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 
-
 const firebaseConfig = {
  apiKey: "AIzaSyAjxjGgc1_HHBUGoXM1kFq4aXiV--plwZE",
    authDomain: "pasarcemerlang-11fa3.firebaseapp.com",
@@ -20,8 +19,9 @@ const firebaseConfig = {
    appId: "1:390685080124:web:6a69ed5fd39c3fc21da139",
    measurementId: "G-W8CDLLBLLC"
 };
+
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(App);
+const db = getFirestore(app);
 
 export async function ambildaftarsiswa() {
   const siswaRef = collection(db, "siswa");
