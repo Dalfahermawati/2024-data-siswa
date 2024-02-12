@@ -33,7 +33,10 @@
           '<label>' + 
           data.nama +
           '</label>' + 
-          '<div>' + 
+          '<div>' +
+          '<a href="#" class="me-2 link-ubah" data="' +
+          data.Id +
+          '">Ubah</a>' +
           ' <button class="btn btn-danger tombol-hapus" data="' +
           data.id +
           '">Hapus</button>' +
@@ -46,10 +49,11 @@
         await hapusSiswa($(this).attr('data'));
         location.reload();
       })
-    });
-    
-    
-    
+      
+      $('.link-ubah').click(async function() {
+        window.location.replace('ubah-siswa.html?docId=' + $(this).attr('data'));
+      })  
+      });
   </script>
 </body>
 
