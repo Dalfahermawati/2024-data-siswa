@@ -54,7 +54,7 @@ export async function hapusSiswa(docId) {
 }
 
 export async function ubahSiswa(docId, val) {
-  await updateDoc(doc(db, "siswa", docId), { nama: val });
+  await updateDoc(doc(db,"siswa", docId), { nama: val });
 }
 
 export async function ambilSiswa(docId) {

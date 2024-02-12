@@ -29,17 +29,17 @@
     import { ambilSiswa, ubahSiswa } from './main.js';
     
     let tombolUbah = document.getElementById('tombol-ubah');
-    let elementNamaSiswa = document.getElementById('input-nama');
+    let elemenNamaSiswa = document.getElementById('input-nama');
     const queryString = window.location.search;
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId');
     const siswa = await ambilSiswa(docId);
     
-    elementNamaSiswa.value = siswa.nama;
+    elemenNamaSiswa.value = siswa.nama;
     
     tombolUbah.addEventListener('click', async function (el) {
       el.preventDefault();
-      await ubahSiswa(docId, elementNamaSiswa.value);
+      await ubahSiswa(docId, elemenNamaSiswa.value);
       window.location.href = 'siswa.html';
     });
   </script>

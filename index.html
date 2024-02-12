@@ -29,11 +29,11 @@
     import { tambahSiswa } from './main.js';
     
     let tombolTambah = document.getElementById('tombol-tambah');
-    let elementNamaSiswa = document.getElementById('input-nama');
+    let elemenNamaSiswa = document.getElementById('input-nama');
     
     tombolTambah.addEventListener('click', async function (el) {
       el.preventDefault();
-      await tambahSiswa(elementNamaSiswa.value);
+      await tambahSiswa(elemenNamaSiswa.value);
       window.location.href = 'siswa.html';
     });
   </script>
